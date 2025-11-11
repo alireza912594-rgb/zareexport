@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -36,7 +36,7 @@
     .lang{display:flex;gap:8px}
     .lang button{border:1px solid #e2e8f0;padding:8px 12px;border-radius:10px;background:#fff;cursor:pointer}
     .lang button.active{background:#111827;color:#fff;border-color:#111827}
-    [data-lang="en"]{display:none}
+    [data-lang="en"]{display:none}[data-lang="ar"]{display:none}
   </style>
 </head>
 <body>
@@ -58,6 +58,7 @@
       <div class="lang">
         <button id="faBtn" class="active">FA</button>
         <button id="enBtn">EN</button>
+        <button id="arBtn">AR</button>
       </div>
     </div>
   </header>
@@ -78,6 +79,14 @@
         <div class="cta">
           <a class="btn primary" href="#contact">Get a free consultation</a>
           <a class="btn" href="#products">Products catalog</a>
+        </div>
+      </div>
+      <div data-lang="ar">
+        <h1>حلول تجارة متكاملة لمواد البناء</h1>
+        <p>من التوريد إلى التخليص الجمركي والشحن الدولي — زارع إكسبورت شريككم الموثوق للتجارة الإقليمية والعالمية لمواد البناء.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">احصل على استشارة مجانية</a>
+          <a class="btn" href="#products">كتالوج المنتجات</a>
         </div>
       </div>
     </section>
@@ -122,7 +131,12 @@
       </form>
       <div style="margin-top:14px" class="grid">
         <div class="card"><strong>ایمیل:</strong> <a href="mailto:info@zareexport.com">info@zareexport.com</a></div>
-        <div class="card"><strong>واتساپ/تلگرام:</strong> +994 XX XXX XX XX</div>
+        <div class="card">
+          <strong>تلفن:</strong> <a href="tel:+989359849099">+98 935 984 9099</a><br>
+          <strong>واتساپ:</strong> <a href="https://wa.me/989359849099" target="_blank" rel="noopener">ارسال پیام</a>
+          &nbsp;|&nbsp;
+          <strong>تلگرام:</strong> <a href="tg://resolve?phone=989359849099">پیام در تلگرام</a>
+        </div>
       </div>
     </section>
   </main>
@@ -134,32 +148,30 @@
   <script>
     // year
     document.getElementById('year').textContent = new Date().getFullYear();
-    // language toggle
-    const faBtn=document.getElementById('faBtn');
-    const enBtn=document.getElementById('enBtn');
-    const showFa=()=>{document.querySelectorAll('[data-lang="fa"]').forEach(e=>e.style.display='');document.querySelectorAll('[data-lang="en"]').forEach(e=>e.style.display='none');faBtn.classList.add('active');enBtn.classList.remove('active')}
-    const showEn=()=>{document.querySelectorAll('[data-lang="en"]').forEach(e=>e.style.display='');document.querySelectorAll('[data-lang="fa"]').forEach(e=>e.style.display='none');enBtn.classList.add('active');faBtn.classList.remove('active')}
-    faBtn.addEventListener('click',showFa);enBtn.addEventListener('click',showEn);
+
+    // language toggle (FA / EN / AR)
+    const faBtn = document.getElementById('faBtn');
+    const enBtn = document.getElementById('enBtn');
+    const arBtn = document.getElementById('arBtn');
+
+    const setLang = (lang) => {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'en') ? 'ltr' : 'rtl';
+      document.querySelectorAll('[data-lang]')
+        .forEach(el => {
+          el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+        });
+      [faBtn, enBtn, arBtn].forEach(b => b && b.classList.remove('active'));
+      ({fa: faBtn, en: enBtn, ar: arBtn}[lang] || faBtn).classList.add('active');
+    };
+
+    const showFa = () => setLang('fa');
+    const showEn = () => setLang('en');
+    const showAr = () => setLang('ar');
+
+    faBtn && faBtn.addEventListener('click', showFa);
+    enBtn && enBtn.addEventListener('click', showEn);
+    arBtn && arBtn.addEventListener('click', showAr);
   </script>
 </body>
 </html>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const faBtn = document.getElementById('faBtn');
-  const enBtn = document.getElementById('enBtn');
-  const arBtn = document.getElementById('arBtn');
-
-  const setLang = (lang) => {
-    document.documentElement.lang = lang;
-    document.documentElement.dir = (lang === 'en') ? 'ltr' : 'rtl';
-    document.querySelectorAll('[data-lang]')
-      .forEach(e => e.style.display = (e.getAttribute('data-lang') === lang) ? '' : 'none');
-    [faBtn, enBtn, arBtn].forEach(b => b.classList.remove('active'));
-    ({ fa: faBtn, en: enBtn, ar: arBtn })[lang].classList.add('active');
-  };
-
-  faBtn.addEventListener('click', () => setLang('fa'));
-  enBtn.addEventListener('click', () => setLang('en'));
-  arBtn.addEventListener('click', () => setLang('ar'));
-</script>
