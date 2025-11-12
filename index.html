@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -36,7 +36,7 @@
     .lang{display:flex;gap:8px}
     .lang button{border:1px solid #e2e8f0;padding:8px 12px;border-radius:10px;background:#fff;cursor:pointer}
     .lang button.active{background:#111827;color:#fff;border-color:#111827}
-    [data-lang="en"]{display:none}[data-lang="ar"]{display:none}
+    
   </style>
 </head>
 <body>
@@ -50,10 +50,10 @@
         </div>
       </div>
       <nav>
-        <a href="#services">خدمات</a>
-        <a href="#products">محصولات</a>
-        <a href="#about">درباره ما</a>
-        <a href="#contact">تماس</a>
+        <a href="#services"><span data-lang="fa">خدمات</span><span data-lang="en" style="display:none">Services</span><span data-lang="ar" style="display:none">الخدمات</span></a>
+        <a href="#products"><span data-lang="fa">محصولات</span><span data-lang="en" style="display:none">Products</span><span data-lang="ar" style="display:none">المنتجات</span></a>
+        <a href="#about"><span data-lang="fa">درباره ما</span><span data-lang="en" style="display:none">About</span><span data-lang="ar" style="display:none">من نحن</span></a>
+        <a href="#contact"><span data-lang="fa">تماس</span><span data-lang="en" style="display:none">Contact</span><span data-lang="ar" style="display:none">تواصل</span></a>
       </nav>
       <div class="lang">
         <button id="faBtn" class="active">FA</button>
@@ -92,50 +92,133 @@
     </section>
 
     <section id="services" class="section">
-      <h2>خدمات ما</h2>
-      <ul class="features">
-        <li class="card">صادرات سیمان، کلینکر، کاشی و سنگ ساختمانی</li>
-        <li class="card">واردات مواد اولیه و آهن‌آلات</li>
-        <li class="card">ترخیص کالا و امور گمرکی</li>
-        <li class="card">حمل‌ونقل دریایی، زمینی و ریلی</li>
-        <li class="card">انبارش، بسته‌بندی و بیمه محموله</li>
-        <li class="card">مشاوره بازرگانی و تطابق استانداردها</li>
-      </ul>
+      <div data-lang="fa">
+        <h2>خدمات ما</h2>
+        <ul class="features">
+          <li class="card">صادرات سیمان، کلینکر، کاشی و سنگ ساختمانی</li>
+          <li class="card">واردات مواد اولیه و آهن‌آلات</li>
+          <li class="card">ترخیص کالا و امور گمرکی</li>
+          <li class="card">حمل‌ونقل دریایی، زمینی و ریلی</li>
+          <li class="card">انبارش، بسته‌بندی و بیمه محموله</li>
+          <li class="card">مشاوره بازرگانی و تطابق استانداردها</li>
+        </ul>
+      </div>
+      <div data-lang="en" style="display:none">
+        <h2>Our Services</h2>
+        <ul class="features">
+          <li class="card">Export of cement, clinker, tiles & natural stone</li>
+          <li class="card">Import of raw materials and steel products</li>
+          <li class="card">Customs clearance & brokerage</li>
+          <li class="card">Sea, road & rail freight</li>
+          <li class="card">Warehousing, packing & cargo insurance</li>
+          <li class="card">Trade advisory & standards compliance</li>
+        </ul>
+      </div>
+      <div data-lang="ar" style="display:none">
+        <h2>خدماتنا</h2>
+        <ul class="features">
+          <li class="card">تصدير الإسمنت والكلنكر والبلاط والحجر الطبيعي</li>
+          <li class="card">استيراد المواد الأولية ومنتجات الحديد</li>
+          <li class="card">التخليص الجمركي والوساطة</li>
+          <li class="card">الشحن البحري والبري والسككي</li>
+          <li class="card">التخزين والتعبئة وتأمين الشحنات</li>
+          <li class="card">الاستشارات التجارية والامتثال للمعايير</li>
+        </ul>
+      </div>
     </section>
 
     <section id="products" class="section">
-      <h2>محصولات منتخب</h2>
-      <div class="grid grid-3">
-        <div class="card"><strong>سیمان و کلینکر</strong><br><small>تیپ ۲، تیپ ۵، پوزولانی</small></div>
-        <div class="card"><strong>فولاد و میلگرد</strong><br><small>استانداردهای ASTM/BS</small></div>
-        <div class="card"><strong>کاشی و سرامیک</strong><br><small>کف، دیوار، پرسلان</small></div>
-        <div class="card"><strong>سنگ ساختمانی</strong><br><small>مرمریت، گرانیت، تراورتن</small></div>
-        <div class="card"><strong>گچ و آهک</strong><br><small>ساختمانی و صنعتی</small></div>
-        <div class="card"><strong>عایق‌ها</strong><br><small>ایزوگام، پشم سنگ، XPS</small></div>
+      <div data-lang="fa">
+        <h2>محصولات منتخب</h2>
+        <div class="grid grid-3">
+          <div class="card"><strong>سیمان و کلینکر</strong><br><small>تیپ ۲، تیپ ۵، پوزولانی</small></div>
+          <div class="card"><strong>فولاد و میلگرد</strong><br><small>استانداردهای ASTM/BS</small></div>
+          <div class="card"><strong>کاشی و سرامیک</strong><br><small>کف، دیوار، پرسلان</small></div>
+          <div class="card"><strong>سنگ ساختمانی</strong><br><small>مرمریت، گرانیت، تراورتن</small></div>
+          <div class="card"><strong>گچ و آهک</strong><br><small>ساختمانی و صنعتی</small></div>
+          <div class="card"><strong>عایق‌ها</strong><br><small>ایزوگام، پشم سنگ، XPS</small></div>
+        </div>
+      </div>
+      <div data-lang="en" style="display:none">
+        <h2>Featured Products</h2>
+        <div class="grid grid-3">
+          <div class="card"><strong>Cement & Clinker</strong><br><small>Type II, Type V, Pozzolanic</small></div>
+          <div class="card"><strong>Steel & Rebar</strong><br><small>ASTM/BS standards</small></div>
+          <div class="card"><strong>Tiles & Ceramics</strong><br><small>Floor, wall, porcelain</small></div>
+          <div class="card"><strong>Building Stone</strong><br><small>Marble, granite, travertine</small></div>
+          <div class="card"><strong>Gypsum & Lime</strong><br><small>Construction & industrial</small></div>
+          <div class="card"><strong>Insulation</strong><br><small>Bitumen membrane, rockwool, XPS</small></div>
+        </div>
+      </div>
+      <div data-lang="ar" style="display:none">
+        <h2>منتجات مختارة</h2>
+        <div class="grid grid-3">
+          <div class="card"><strong>الإسمنت والكلنكر</strong><br><small>النوع II، النوع V، بوزولاني</small></div>
+          <div class="card"><strong>الصلب وحديد التسليح</strong><br><small>معايير ASTM/BS</small></div>
+          <div class="card"><strong>البلاط والسيراميك</strong><br><small>أرضيات، جدران، بورسلان</small></div>
+          <div class="card"><strong>الحجر البنائي</strong><br><small>رخام، غرانيت، ترافرتين</small></div>
+          <div class="card"><strong>الجص والجير</strong><br><small>إنشائي وصناعي</small></div>
+          <div class="card"><strong>العوازل</strong><br><small>لفائف البيتومين، صوف صخري، XPS</small></div>
+        </div>
       </div>
     </section>
 
     <section id="about" class="section">
-      <h2>درباره زارع اکسپورت</h2>
-      <p>با شبکه‌ای از تولیدکنندگان، تأمین‌کنندگان و شرکت‌های حمل‌ونقل در منطقه، ما چرخهٔ تأمین شما را کوتاه و مطمئن می‌کنیم. تمرکز ما روی شفافیت قیمت، پایبندی به زمان‌بندی و کیفیت تحویل است.</p>
+      <div data-lang="fa">
+        <h2>درباره زارع اکسپورت</h2>
+        <p>با شبکه‌ای از تولیدکنندگان، تأمین‌کنندگان و شرکت‌های حمل‌ونقل در منطقه، ما چرخهٔ تأمین شما را کوتاه و مطمئن می‌کنیم. تمرکز ما روی شفافیت قیمت، پایبندی به زمان‌بندی و کیفیت تحویل است.</p>
+      </div>
+      <div data-lang="en" style="display:none">
+        <h2>About Zare Export</h2>
+        <p>With a network of manufacturers, suppliers and logistics partners across the region, we shorten and de‑risk your supply chain with price transparency, on‑time delivery and consistent quality.</p>
+      </div>
+      <div data-lang="ar" style="display:none">
+        <h2>من نحن</h2>
+        <p>لدينا شبكة من المصنّعين والمورّدين وشركات اللوجستيات في المنطقة، ما يختصر سلسلة التوريد لديكم ويضمن الشفافية في الأسعار والالتزام بالمواعيد وجودة التسليم.</p>
+      </div>
     </section>
 
     <section id="contact" class="section">
-      <h2>تماس با ما</h2>
-      <p>برای استعلام قیمت یا همکاری با ما، فرم زیر را تکمیل کنید یا مستقیماً پیام دهید.</p>
-      <form action="https://formspree.io/f/your-id" method="POST" class="card">
-        <label>نام و شرکت<input name="name" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></label>
-        <label>ایمیل<input type="email" name="email" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></label>
-        <label>پیام<textarea name="message" rows="4" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></textarea></label>
-        <button class="btn primary" type="submit">ارسال</button>
-      </form>
-      <div style="margin-top:14px" class="grid">
-        <div class="card"><strong>ایمیل:</strong> <a href="mailto:info@zareexport.com">info@zareexport.com</a></div>
-        <div class="card">
-          <strong>تلفن:</strong> <a href="tel:+989359849099">+98 935 984 9099</a><br>
-          <strong>واتساپ:</strong> <a href="https://wa.me/989359849099" target="_blank" rel="noopener">ارسال پیام</a>
-          &nbsp;|&nbsp;
-          <strong>تلگرام:</strong> <a href="tg://resolve?phone=989359849099">پیام در تلگرام</a>
+      <div data-lang="fa">
+        <h2>تماس با ما</h2>
+        <p>برای استعلام قیمت یا همکاری با ما، فرم زیر را تکمیل کنید یا مستقیماً پیام دهید.</p>
+        <form action="https://formspree.io/f/your-id" method="POST" class="card">
+          <label>نام و شرکت<input name="name" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></label>
+          <label>ایمیل<input type="email" name="email" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></label>
+          <label>پیام<textarea name="message" rows="4" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></textarea></label>
+          <button class="btn primary" type="submit">ارسال</button>
+        </form>
+        <div style="margin-top:14px" class="grid">
+          <div class="card"><strong>ایمیل:</strong> <a href="mailto:info@zareexport.com">info@zareexport.com</a></div>
+          <div class="card"><strong>تلفن:</strong> <a href="tel:+989359849099">+98 935 984 9099</a> | <strong>واتساپ/تلگرام:</strong> <a href="https://wa.me/989359849099" target="_blank" rel="noopener">پیام</a> • <a href="tg://resolve?phone=989359849099">تلگرام</a> | <strong>دفتر:</strong> +98 21 5529 2110</div>
+        </div>
+      </div>
+      <div data-lang="en" style="display:none">
+        <h2>Contact Us</h2>
+        <p>For pricing or partnerships, fill the form or message us directly.</p>
+        <form action="https://formspree.io/f/your-id" method="POST" class="card">
+          <label>Name & Company<input name="name" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></label>
+          <label>Email<input type="email" name="email" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></label>
+          <label>Message<textarea name="message" rows="4" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></textarea></label>
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+        <div style="margin-top:14px" class="grid">
+          <div class="card"><strong>Email:</strong> <a href="mailto:info@zareexport.com">info@zareexport.com</a></div>
+          <div class="card"><strong>Phone:</strong> <a href="tel:+989359849099">+98 935 984 9099</a> | <strong>WhatsApp/Telegram:</strong> <a href="https://wa.me/989359849099" target="_blank" rel="noopener">Message</a> • <a href="tg://resolve?phone=989359849099">Telegram</a> | <strong>Office:</strong> +98 21 5529 2110</div>
+        </div>
+      </div>
+      <div data-lang="ar" style="display:none">
+        <h2>تواصل معنا</h2>
+        <p>لطلب عرض أسعار أو التعاون، يرجى تعبئة النموذج أو مراسلتنا مباشرة.</p>
+        <form action="https://formspree.io/f/your-id" method="POST" class="card">
+          <label>الاسم والشركة<input name="name" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></label>
+          <label>البريد الإلكتروني<input type="email" name="email" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></label>
+          <label>الرسالة<textarea name="message" rows="4" required style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border:1px solid #e2e8f0;border-radius:10px"></textarea></label>
+          <button class="btn primary" type="submit">إرسال</button>
+        </form>
+        <div style="margin-top:14px" class="grid">
+          <div class="card"><strong>البريد:</strong> <a href="mailto:info@zareexport.com">info@zareexport.com</a></div>
+          <div class="card"><strong>الهاتف:</strong> <a href="tel:+989359849099">+98 935 984 9099</a> | <strong>واتساب/تلغرام:</strong> <a href="https://wa.me/989359849099" target="_blank" rel="noopener">رسالة</a> • <a href="tg://resolve?phone=989359849099">تلغرام</a> | <strong>هاتف المكتب:</strong> +98 21 5529 2110</div>
         </div>
       </div>
     </section>
@@ -159,7 +242,9 @@
       document.documentElement.dir = (lang === 'en') ? 'ltr' : 'rtl';
       document.querySelectorAll('[data-lang]')
         .forEach(el => {
-          el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+          const isMatch = el.getAttribute('data-lang') === lang;
+          // show for selected language, hide others
+          el.style.display = isMatch ? (el.tagName === 'SPAN' ? 'inline' : '') : 'none';
         });
       [faBtn, enBtn, arBtn].forEach(b => b && b.classList.remove('active'));
       ({fa: faBtn, en: enBtn, ar: arBtn}[lang] || faBtn).classList.add('active');
